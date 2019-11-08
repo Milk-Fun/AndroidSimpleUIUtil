@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dim_102_dp"
+    android:layout_height="@dimen/dim_80_dp"
+    android:background="@drawable/zprogree_juhua_back_ground">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="@dimen/dim_35_dp"
+        android:layout_height="@dimen/dim_35_dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/dim_32_dp"
+        android:layout_marginLeft="@dimen/dim_32_dp"
+        android:layout_marginTop="@dimen/dim_8_dp"
+        android:layout_marginEnd="@dimen/dim_32_dp"
+        android:layout_marginRight="@dimen/dim_32_dp"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/zprogress_juhua_anim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_content_z_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dim_20_dp"
+        android:layout_marginTop="@dimen/dim_4_dp"
+        android:layout_marginBottom="@dimen/dim_8_dp"
+        android:text="加载中"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/size_14_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loading"
+        app:layout_constraintStart_toStartOf="@+id/loading"
+        app:layout_constraintTop_toBottomOf="@+id/loading" />
+
+</android.support.constraint.ConstraintLayout>

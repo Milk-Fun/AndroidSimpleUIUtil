@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ztoast_back_ground"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_toast"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/dim_324_dp"
+        android:minWidth="@dimen/dim_102_dp"
+        android:layout_height="50dp"
+        tools:text="登录成功"
+        android:textSize="@dimen/size_14_sp"
+        android:textColor="#FFFFFF"
+        android:layout_margin="@dimen/dim_5_dp"
+        android:gravity="center"/>
+
+</FrameLayout>
