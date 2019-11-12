@@ -9,3 +9,4 @@
 - 菊花进度条 [ZJuHuaProgress](https://github.com/MilkZS/AndroidDefineUIUtil/blob/master/ui/src/main/java/com/milkz/ui/progress/ZJuHuaProgress.java)
 - 可拖动按钮 [ZMoveButton](https://github.com/MilkZS/AndroidDefineUIUtil/blob/master/ui/src/main/java/com/milkz/ui/button/ZMoveButton.java)
 - 可拖动悬浮按钮 [ZMoveFloatButton](https://github.com/MilkZS/AndroidDefineUIUtil/blob/master/ui/src/main/java/com/milkz/ui/button/ZMoveFloatButton.java)
+- 完成对勾动画 [ZFinishImage](https://github.com/MilkZS/AndroidDefineUIUtil/blob/master/ui/src/main/java/com/milkz/ui/status/ZFinishImage.java)
