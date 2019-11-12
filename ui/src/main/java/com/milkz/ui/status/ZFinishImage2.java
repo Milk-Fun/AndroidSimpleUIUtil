@@ -14,55 +14,53 @@ import android.view.View;
 /**
  * Create by zuoqi@bhz.com.cn on 2019/11/12 9:59
  */
-public class ZFinishImage extends View {
+public class ZFinishImage2 extends View {
 
-    private Paint paint;
     private Paint paint2;
-    private Path pathOk;
+    private Paint paint3;
     private Path pathOk2;
     private PathMeasure pathMeasure;
-    private boolean ifFirst;
 
     private float fraction;
     private static final int radius = 30; // 圆的半径
+    private float r;
+    private float privateX;
+    private float privateY;
+    private float fR = 0;
 
-    public ZFinishImage(Context context) {
+    public ZFinishImage2(Context context) {
         this(context, null);
     }
 
-    public ZFinishImage(Context context, AttributeSet attrs) {
+    public ZFinishImage2(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         init();
     }
 
     private void init() {
-        float r = dp2px(radius, getContext());
-        float privateX = dp2px(30, getContext());
-        float privateY = dp2px(30, getContext());
-
-        paint = new Paint();
-        paint.setColor(Color.parseColor("#3C86FF"));
-        paint.setStyle(Paint.Style.FILL);
-        paint.setStrokeWidth(dp2px(1, getContext()));
+        r = dp2px(radius, getContext());
+        privateX = dp2px(30, getContext());
+        privateY = dp2px(30, getContext());
 
         paint2 = new Paint();
         paint2.setColor(Color.WHITE);
         paint2.setStyle(Paint.Style.STROKE);
         paint2.setStrokeWidth(dp2px(5, getContext()));
 
+        paint3 = new Paint();
+        paint3.setColor(Color.parseColor("#3C86FF"));
+        paint3.setStyle(Paint.Style.FILL);
+
+
         pathMeasure = new PathMeasure();
 
         Path pathCirCle = new Path();
-        pathCirCle.addCircle(privateX, privateY, r, Path.Direction.CCW);
         pathCirCle.moveTo(dp2px(14, getContext()), dp2px(28, getContext()));
         pathCirCle.lineTo(dp2px(28, getContext()), dp2px(43, getContext()));
         pathCirCle.lineTo(dp2px(50, getContext()), dp2px(23, getContext()));
-        pathOk = new Path();
         pathOk2 = new Path();
         pathMeasure.setPath(pathCirCle, false);
 
-        ifFirst = true;
         startAnim();
     }
 
@@ -85,20 +83,14 @@ public class ZFinishImage extends View {
         canvas.drawColor(Color.WHITE);
 
         if (fraction <= 1) {
-            float len = pathMeasure.getLength();
-            float et = len * fraction;
-            pathMeasure.getSegment(0, et, pathOk, true);
+            fR = r * fraction;
         } else {
-            if (ifFirst) {
-                ifFirst = false;
-                pathMeasure.nextContour();
-            }
             float len = pathMeasure.getLength();
             float et = len * (fraction - 1);
             pathMeasure.getSegment(0, et, pathOk2, true);
         }
 
-        canvas.drawPath(pathOk, paint);
+        canvas.drawCircle(privateX, privateY, fR, paint3);
         canvas.drawPath(pathOk2, paint2);
     }
 
