@@ -17,18 +17,18 @@
 
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 - 在app gradle中引用
 
 ```
 dependencies {
-	        implementation 'com.github.Milk-Fun:AndroidSimpleUIUtil:Tag'
-	}
+	implementation 'com.github.Milk-Fun:AndroidSimpleUIUtil:Tag'
+}
 ```
 TAG为版本号，当前最新版本为<font color=red>1.0.3</font>
